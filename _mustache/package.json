@@ -1,0 +1,16 @@
+{
+  "name": "mustache_",
+  "version": "1.0.0",
+  "description": "第一個webpack項目",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
