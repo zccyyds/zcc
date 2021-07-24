@@ -7,17 +7,41 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>我的第一個webpack項目</h1>
+    <div class="slot"></div>
+    
     <script src="./xuni/bundle.js"></script>
     <script>
-        var templateStr = `{{#aaa}}今天買了一個新{{phone}}，我真{{happen}}啊！！{{/aaa}}`
+        var templateStr = `
+                    <h4>
+                        {{#aaa}}   
+                        <ul>
+                            <li>姓名：{{name}}</li>
+                            <li>年龄：{{age}}</li>
+                            <li>爱好：
+                                <ul>
+                                    {{#bbb}}
+                                    <li>
+                                        {{.}}
+                                    </li>
+                                    {{/bbb}}
+                                </ul>
+                            </li>
+                        </ul>
+                        {{/aaa}}
+                    </h4>`
 
         var list = {
-            'phone': '手機',
-            'happen': '高興'
+            world : '111111',
+            aaa:[
+                {name: '小明', age: '12',bbb:['篮球','游泳','乒乓球']},
+                {name: '小红', age: '11',bbb:['游泳','乒乓球']},
+                {name: '小刚', age: '15',bbb:['篮球']},
+            ]
         }
 
-        _mustache.render(templateStr,list)
+        var resurtStr = _mustache.render(templateStr,list)
+
+        document.getElementsByClassName('slot')[0].innerHTML = resurtStr
     </script>
 </body>
 </html>

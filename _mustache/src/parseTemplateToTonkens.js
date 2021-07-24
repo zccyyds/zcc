@@ -1,4 +1,4 @@
-
+import nestToken from "./nestToken";
 import Scanner from "./Scanner";
 /*
 *   将扫描器得到的结果转换为数组形式
@@ -31,5 +31,5 @@ export default function parseTemplateToTonkens(templateStr){
         scanner.scan('}}')
     }
 
-    return tonken
+    return nestToken(tonken)
 }

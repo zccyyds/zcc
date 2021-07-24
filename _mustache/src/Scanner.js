@@ -3,7 +3,7 @@
 */
 export default class Scanner {
     constructor(templateStr){
-        console.log(templateStr)
+        // console.log(templateStr)
         this.templateStr =templateStr
         //指針
         this.pos = 0
